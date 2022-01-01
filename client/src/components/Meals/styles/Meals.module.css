@@ -1,0 +1,43 @@
+.control {
+  margin: 3rem auto;
+  width: 95%;
+  max-width: 20rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.control a {
+  display: block;
+  margin-bottom: 2rem;
+  font: inherit;
+  color: white;
+  font-weight: bold;
+}
+
+.control a:hover,
+.control a:active {
+  background-color: rgb(197, 190, 190);
+}
+
+.anchor {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.anchor a {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.anchor a:hover,
+.anchor a:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}

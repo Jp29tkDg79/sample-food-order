@@ -1,0 +1,46 @@
+.meal {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal h3 {
+  margin: initial;
+}
+
+.summary {
+  font-style: italic;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #ab5502;
+  font-size: 1.25rem;
+}
+
+.anchor {
+  text-align: center;
+}
+
+.anchor a {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.25rem 2rem;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.anchor a:hover,
+.anchor a:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}

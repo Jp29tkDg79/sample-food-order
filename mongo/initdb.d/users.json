@@ -1,0 +1,13 @@
+[
+  {
+    "name": "admin",
+    "email": "admin@admin.com",
+    "password": "$2a$12$3cssICRKHxwcuDV4JwQ1Lus43cEHSWjtt5I61qDmm32bilyCnfLgW",
+    "address": {
+      "street": "admin",
+      "postal": "11111",
+      "city": "admin"
+    },
+    "isAdmin": true
+  }
+]

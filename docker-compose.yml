@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  client:
+    build:
+      context: client
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    command: npm start
+    tty: true
+    stdin_open: true
+    restart: always
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    ports:
+      - 5000:5000
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/store
+      - MONGO_CLIENT=user
+      - MONGO_CLIENT_PASSWORD=user
+      - JWT_KEY=secret123
+      - JWT_KEY_NAME=jwttoken
+    command: npm start
+    tty: true
+    stdin_open: true
+    restart: always
+    depends_on:
+      - mongo
+
+  mongo:
+    build:
+      context: mongo
+      dockerfile: Dockerfile
+    volumes:
+      - ./mongo/initdb.d:/docker-entrypoint-initdb.d
+      - ./mongo/db:/var/lib/mongo
+    ports:
+      - 27017:27017
+    command: mongod --dbpath /var/lib/mongo
+    tty: true
+    stdin_open: true
+    restart: always
