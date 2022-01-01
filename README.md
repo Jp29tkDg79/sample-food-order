@@ -21,7 +21,10 @@
  
 ## 使い方
 1. docker-compose up -d
- 
+
+## デモ
+![sample-food-orderデモ](https://user-images.githubusercontent.com/64829955/147844920-3487e38f-449d-47f0-b9b1-2bbecec326b7.gif)
+
 ## インストール
  
 ```
